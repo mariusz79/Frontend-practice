@@ -1,9 +1,9 @@
 function show() {
     var menu = document.querySelector(".menu");
-    if (menu.style.display === "none") {
-        menu.style.display = "flex";
+    if (menu.style.visibility === "hidden") {
+        menu.style.visibility = "visible";
     }
     else {
-        menu.style.display = "none";
+        menu.style.visibility = "hidden";
     }
 }

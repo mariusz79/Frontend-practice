@@ -13,23 +13,25 @@
 body{
     margin: 0;
     background-color: hsl(210, 46%, 95%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     height: 100vh;
     font-family: 'Manrope', sans-serif;
+    overflow: hidden;
 }
 
 .container{
-    max-width: 1440px;
+    width: 100vw;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
     height: 350px;
     width: 1000px;
     background-color: white;
     border-radius: 15px;
     display: flex;
-    position: relative;
-    z-index: 0;
 }
 
 .image{
@@ -60,6 +62,11 @@ body{
     color: hsl(217, 19%, 35%); 
 }
 
+.txt{
+    line-height: 25px; 
+    font-weight: 500;
+}
+
 .person{
     display: flex;
     justify-content: space-between;
@@ -67,6 +74,12 @@ body{
 
 .person-left{
     display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.person-right {
+    position: relative;
 }
 
 .avatar{
@@ -96,31 +109,134 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 3;
 }
 
 .menu{
     justify-content: center;
     align-items: center;
-    display: none;
+    display: flex;
     background-color: hsl(217, 19%, 35%);
     width: 240px;
     text-align: center;
     border-radius: 15px;
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     bottom: 100px;
-    right: -50px;
+    left: -114px;
+    visibility: hidden;
 }
 .menu::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  border-width: 10px;
-  border-style: solid;
-  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
 }
 
 .menu img, .menu span{
     padding: 20px 10px;
+}
+
+@media (max-width: 1110px) {
+    .card {
+        width: 80vw;
+        height: 400px; 
+    }
+    }
+
+@media (max-width: 900px) {
+    .card {
+        width: 89vw;
+        height: 400px; 
+    }
+    }
+
+@media (max-width: 800px) {
+    .card {
+        height: 320px; 
+    }
+    .intro {
+        font-size: 23px;
+    }
+    .txt {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    }
+
+@media (max-width: 700px) {
+    .intro {
+        font-size: 21px;
+    }
+    .txt {
+        font-size: 14px;
+    }
+    .name {
+        font-size: 15px;
+    }
+    }
+
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        height: 85vh;
+        width: 65vw;
+    }
+    .image img {
+        border-radius: 15px 15px 0 0;
+        height: 34vh;
+    }
+    .info {
+        margin: 0 27px;
+    }
+    .menu::after {
+        content: none;
+    }
+    .menu{
+        bottom: 0;
+        left: -53vw;
+        width: 64vw;
+        justify-content: start;
+    }
+}
+
+@media (max-width: 500px) {
+    .image img {
+        height: 31vh;
+    }
+    .info {
+        flex: 5;
+    }
+    .card{
+        width: 71vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .card{
+        width: 85vw;
+}
+    .image img {
+        height: 31vh;
+        }
+    .menu{
+        left: -68vw;
+        width: 83vw;
+}
+}
+
+@media (max-width: 400px) {
+    .card{
+        width: 90vw;
+}
+    .image img {
+            height: 31vh;
+        }
+    .intro{
+        font-size: 18px;
+    }
 }
