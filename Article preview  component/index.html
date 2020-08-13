@@ -5,12 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article preview component</title>
-    <link rel="stylesheet" type="txt/css" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-    Shift the overall look and feel by adding these wonderful touches to furniture in your home Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel
-    complete. Michelle Appleton 28 Jun 2020 Share Challenge by Frontend Mentor. Coded by Your Mariusz Pawlowicz.
+    <div class="container">
+        <div class="image">
+            <img src="images/drawers.jpg" alt="drawers">
+        </div>
+        <div class="info">
+            <div class="intro">
+                Shift the overall look and feel by adding these wonderful touches to furniture in your home
+            </div>
+            <div style="line-height: 25px; font-weight: 500;">
+                Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.
+            </div>
+            <div class="person">
+                <div class="person-left">
+                    <div class="avatar">
+                        <img src="images/avatar-michelle.jpg" alt="avatar">
+                    </div>
+                    <div class="name">
+                        <div><b>Michelle Appleton </b></div>
+                        <div class="date">28 Jun 2020</div>
+                    </div>
+                </div>
+                <div class="person-right">
+                    <div class="menu">
+                        <span>SHARE</span>
+                        <img src="images/icon-facebook.svg" alt="facebook icon">
+                        <img src="images/icon-twitter.svg" alt="twitter icon">
+                        <img src="images/icon-pinterest.svg" alt="pinterest icon">
+                    </div>
+                    <div class="share" onclick="show()">
+                        <img src="images/icon-share.svg" alt="share icon">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Challenge by Frontend Mentor. Coded by Mariusz Pawlowicz.
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 

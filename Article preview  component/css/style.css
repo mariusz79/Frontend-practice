@@ -1,0 +1,126 @@
+/* global settings */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+}
+
+.container{
+    max-width: 1440px;
+    height: 350px;
+    width: 1000px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    z-index: 0;
+}
+
+.image{
+    flex: 3;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.info{ 
+    flex: 4;
+    color:hsl(214, 17%, 51%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 40px;
+}
+
+.intro{
+    margin-bottom: 0;
+    font-size: 28px;   
+    font-weight: 700;
+    color: hsl(217, 19%, 35%); 
+}
+
+.person{
+    display: flex;
+    justify-content: space-between;
+}
+
+.person-left{
+    display: flex;
+}
+
+.avatar{
+    width: 50px;
+}
+
+.avatar img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.name{
+    margin-left: 20px;
+    line-height: 27px;
+    color: hsl(217, 19%, 35%);
+}
+
+.date{
+    color: hsl(212, 23%, 69%);
+}
+
+.share{
+    width: 40px;
+    height: 40px;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: hsl(217, 19%, 35%);
+    width: 240px;
+    text-align: center;
+    border-radius: 15px;
+    position: absolute;
+    z-index: 10;
+    bottom: 100px;
+    right: -50px;
+}
+.menu::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+
+.menu img, .menu span{
+    padding: 20px 10px;
+}
